@@ -8,15 +8,27 @@ import { MenuItem } from 'primeng/api';
 export class MenuComponent implements OnInit {
   items: MenuItem[] | undefined;
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.items = [
       {
         label: 'Pipes from Angular',
         icon: 'pi pi-desktop',
         items: [
-          { label: 'Text and dates', icon: 'pi pi-align-left' },
-          { label: 'Numbers', icon: 'pi pi-dollar' },
-          { label: 'Non common', icon: 'pi pi-globe' },
+          {
+            label: 'Text and dates',
+            icon: 'pi pi-align-left',
+            routerLink: '/',
+          },
+          {
+            label: 'Numbers',
+            icon: 'pi pi-dollar',
+            routerLink: 'numbers',
+          },
+          {
+            label: 'Non common',
+            icon: 'pi pi-globe',
+            routerLink: 'uncommon',
+          },
         ]
       },
       {

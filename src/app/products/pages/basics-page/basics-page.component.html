@@ -1,1 +1,64 @@
-<p>basics-page works!</p>
+<p-panel header="Basic pipes" class="p-2">
+  <p>Pipes included in Angular - Normally in the common module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-4">
+    <p-card header="Uppercase">
+      {{ nameLower | uppercase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Lowercase">
+      {{ nameUpper | lowercase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Titlecase">
+      {{ fullName | titlecase }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="dates">
+      <ol>
+        <li>date</li>
+        <li>date | date</li>
+        <li>date | date:'short'</li>
+        <li>date | date:'long'</li>
+        <li>date | date:'MMMM'</li>
+        <li>date | date:'MMMM dd, yyyy'</li>
+        <li>date | date:'MMMM dd, yyyy'</li>
+      </ol>
+
+      <hr>
+
+      <ol>
+        <li>Date | date:'long':'GMT-6'</li>
+        <li>Date | date:'long':'CEST-1'</li>
+        <li>Date | date:'long':'CEST-1':'es-ES'</li>
+        <li>Date | date:'long':'CEST-1':'de-CH'</li>
+      </ol>
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-6">
+    <p-card header="Date">
+      <ol>
+        <li>{{ now }}</li>
+        <li>{{ now | date }}</li>
+        <li>{{ now | date:'short' }}</li>
+        <li>{{ now | date:'long' }}</li>
+        <li>{{ now | date:'MMMM dd, yyyy' }}</li>
+      </ol>
+
+      <ol>
+        <li>Date | {{ now | date:'long':'GMT-6' }}</li>
+        <li>Date | {{ now | date:'long':'CEST-1' }}</li>
+        <li>Date | {{ now | date:'long':'CEST-1':'en-US' }}</li>
+        <li>Date | {{ now | date:'long':'CEST-1':'de-CH' }}</li>
+      </ol>
+    </p-card>
+</div>
